@@ -44,15 +44,7 @@ matplotlib	Charts and visualizations
 pandas	Data handling for plots/tables
 networkx	Attack graph visualizations
 tabulate	Clean console tables
-📁 Project Structure
-bash
-Copy
-Edit
-CTI_Report/
-├── main.py              # Main script to run analysis
-├── mitre_data.py        # MITRE ATT&CK keyword mapping
-├── visualizer.py        # Graph and table generation
-├── sample_report.txt    # Example input report
+
 ⚙️ How It Works
 Input: Load or paste a plaintext cyber threat report.
 
