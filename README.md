@@ -1,65 +1,78 @@
-# CTI_Report
- 🔐 AI-Powered Cyber Threat Intelligence Analyzer
-This project is a lightweight, AI-assisted cyber threat analysis tool that extracts key Indicators of Compromise (IOCs) from textual threat reports and maps them to the MITRE ATT&CK framework. It also visualizes the attack flow using Python libraries — no external websites or tools needed.
+🧠 CTI_Report — AI-Powered Cyber Threat Intelligence Analyzer
+CTI_Report is a lightweight, Python-based tool that uses AI and automation to extract and analyze cybersecurity threat intelligence from text reports. It identifies Indicators of Compromise (IOCs), maps them to the MITRE ATT&CK framework, and visualizes the attack chain — all without needing any external tools or online services.
 
-🚀 Features
-📄 Text Analysis: Parse raw cyber reports to identify IOCs like IPs, domains, URLs, file hashes, and more.
+🚀 Key Features
+📝 Smart Text Parsing
+Automatically analyzes raw cybersecurity reports to detect and extract:
 
-🎯 MITRE Mapping: Automatically map textual attack descriptions to corresponding MITRE ATT&CK techniques and tactics.
+✅ IP addresses
 
-📊 Visualizations:
+✅ Domains & URLs
 
-IOC Table (using tabulate)
+✅ File hashes (MD5, SHA1, SHA256)
 
-Technique-by-Tactic Bar Graph (with matplotlib)
+✅ Other critical IOCs
 
-Full Attack Flow Graph (with networkx)
+🎯 MITRE ATT&CK Mapping
+Maps attack-related text to MITRE ATT&CK Tactics and Techniques
 
-🧪 Robust Testing with:
+Uses keyword matching and pattern recognition
 
-Clean sample reports
+Helps you understand attacker behavior at a glance
 
-Malformed/broken reports (to test error handling)
+📊 Visual Insights
+Your data comes to life with powerful built-in visualizations:
 
-🛠 Technologies Used
-Python 3.x
+IOC Table – Clean table of all detected IOCs using tabulate
 
-re for regex-based IOC extraction
+Technique-by-Tactic Chart – Simple bar graph with matplotlib
 
-matplotlib and pandas for graphs and tables
+Attack Flow Graph – Visual diagram of the full attack chain using networkx
 
-networkx for attack chain diagrams
+🧪 Built-in Testing
+Designed to handle all types of input:
 
-tabulate for clean console output
+✅ Clean, structured cyber reports
 
-📂 Project Structure
+✅ Messy or incomplete reports (error-resilient parsing)
+
+🛠 Tech Stack
+Tool/Library	Purpose
+Python 3.x	Core programming language
+re	Regex-based IOC extraction
+matplotlib	Charts and visualizations
+pandas	Data handling for plots/tables
+networkx	Attack graph visualizations
+tabulate	Clean console tables
+📁 Project Structure
 bash
 Copy
 Edit
-├── main.py                  # Main script to run everything
-├── mitre_data.py            # Sample data mapping keywords to MITRE techniques
-├── visualizer.py            # Module for all graphs/tables/diagrams
-├── sample_report.txt        # Example cyber report (you can modify this)
-📌 How It Works
-Paste or load a cyber report (plaintext).
+CTI_Report/
+├── main.py              # Main script to run analysis
+├── mitre_data.py        # MITRE ATT&CK keyword mapping
+├── visualizer.py        # Graph and table generation
+├── sample_report.txt    # Example input report
+⚙️ How It Works
+Input: Load or paste a plaintext cyber threat report.
 
-The script extracts:
+Extraction: Script identifies all IOCs using regex.
 
-IPs
+MITRE Mapping: Descriptions are matched to MITRE techniques.
 
-Domains
+Output:
 
-URLs
+IOC summary table
 
-MD5/SHA1/SHA256 hashes
+MITRE tactic-technique chart
 
-Matches lines to known MITRE techniques using keyword matching.
+Directed graph of attack flow
 
-Displays:
+🎯 Example Output (Visualized)
+IPs: 192.168.10.45, 91.240.118.221
 
-A summary table of all techniques and tactics
+Technique: Command and Control → T1071.001 (Web Protocols)
 
-A tactic-vs-technique bar chart
+Chart: Bar graph of tactics
 
-A full attack flow using a directed graph
-
+Graph: Node-link diagram of attack path
